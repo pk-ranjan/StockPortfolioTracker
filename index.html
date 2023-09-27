@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Portfolio Tracker</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Link to external JavaScript file -->
+  </head>
+  <body>
+    <h1>Stock Portfolio Tracker</h1>
+    <div class="container">
+      <h2>Your Portfolio</h2>
+      <div class="portfolio">
+        <p>
+          Total Portfolio Value: $<span id="totalPortfolioValue">0.00</span>
+        </p>
+        <p>Total Investment: $<span id="totalInvestment">0.00</span></p>
+        <p>Not Invested: $<span id="notInvestedAmount">0.00</span></p>
+        <p>Total Shares: <span id="totalShares">0</span></p>
+        <p><span id="ProfitLoss">0.00</span></p>
+        <h3>Invested Companies:</h3>
+        <ul id="investedCompanies"></ul>
+      </div>
+      <div class="portfolio">
+        <h3>Average share price of each company:</h3>
+        <ul id="averagePrices"></ul>
+      </div>
+      <div class="chart">
+        <h2>Share Price Charts</h2>
+        <div class="company-chart">
+          <h3>Apple</h3>
+          <canvas id="shareChart" height="100"></canvas>
+        </div>
+      </div>
+      <div class="actions">
+        <h2>Actions</h2>
+        <label for="investmentAmount">Investment Amount: $</label>
+        <input type="number" id="investmentAmount" step="0.01" />
+        <label for="shareOptions">Select Share:</label>
+        <select id="shareOptions">
+          <option value="Apple">Apple - $150.00</option>
+          <option value="Microsoft">Microsoft - $300.00</option>
+          <option value="Amazon">Amazon - $3,000.00</option>
+          <option value="Google">Google - $2,000.00</option>
+          <option value="Tesla">Tesla - $700.00</option>
+        </select>
+        <button onclick="buyShares()">Buy Shares</button>
+        <button onclick="sellShares()">Sell Shares</button>
+      </div>
+    </div>
+    <script
+      type="text/JavaScript"
+      language="JavaScript"
+      src="myscript.js"
+    ></script>
+  </body>
+</html>
